@@ -31,7 +31,7 @@ public class DataServiceImpl extends FacadeLambdaImpl implements DataService, Pr
         if (warehouse.hold(key)) {
             print.accept(key);
         } else {
-            System.out.printf(NO_KEY_FOUND, input);
+            System.out.printf(NO_KEY_FOUND, key);
         }
     }
 
@@ -78,7 +78,7 @@ public class DataServiceImpl extends FacadeLambdaImpl implements DataService, Pr
         while ((line = reader.readLine()) != null) {
             if (test(line)) {
                 String[] values = lambda.getTokens(line);
-                warehouse.accept(values[0], values[1]);
+                warehouse.accept(values[0], values[2]);
             }
         }
         System.out.printf(LOADED_DATA, fileName);

@@ -21,6 +21,6 @@ public class FacadeLambdaImpl implements InputToken, Values, BiConsumer<String, 
 
     @Override
     public void accept(String key, String value) {
-        System.out.println("Saved: " + key + " = " + value);
+        System.out.println("Saved " + key + " = " + value);
     }
 }
